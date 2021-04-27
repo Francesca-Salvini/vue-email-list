@@ -12,92 +12,27 @@ var app = new Vue (
     {
         el: '#root',
         data : {
-            emails : []
+            emails : [],
+            numberOfEmail : 10
         },
         methods : {
-
-
+        
         },
         mounted() {
-                axios
-                    .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                    .then((response) => {
-                        const result = response.data;
-                        console.log(result);
-                        this.emails.push(result.response);
-                    });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+            
+            for(i = 0; i < this.numberOfEmail; i++ ){
+                    
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) => {
                     const result = response.data;
                     console.log(result);
                     this.emails.push(result.response);
                 });
+                
+            }
+               
 
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
-
-                axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((response) => {
-                    const result = response.data;
-                    console.log(result);
-                    this.emails.push(result.response);
-                });
+                
         }
 
     }
