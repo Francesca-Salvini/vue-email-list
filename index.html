@@ -21,7 +21,13 @@
 </head>
 <body>
 
-    <div id="root"></div>
+    <div id="root">
+        <ul>
+            <li v-for="email in emails">
+               Email : {{ email }}
+            </li>
+        </ul>
+    </div>
     
 
     <!--JAVASCRIPT-->
