@@ -23,7 +23,10 @@
 
     <div id="root">
         <ul>
-            <li v-for="email in emails" v-if="emails.length == numberOfEmail">
+            <li 
+            v-for="email in emails" 
+            v-if="emails.length == numberOfEmail"
+            >
                Email : {{ email }}
             </li>
         </ul>
