@@ -22,11 +22,8 @@
 <body>
 
     <div id="root">
-        <ul>
-            <li 
-            v-for="email in emails" 
-            v-if="emails.length == numberOfEmail"
-            >
+        <ul v-if="emails.length == numberOfEmail">
+            <li v-for="email in emails">
                Email : {{ email }}
             </li>
         </ul>
