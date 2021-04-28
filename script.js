@@ -20,7 +20,7 @@ var app = new Vue (
         },
         mounted() {
             
-            for(i = 0; i < this.numberOfEmail; i++ ){
+            for( let i = 0; i < this.numberOfEmail; i++ ){
                     
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) => {
